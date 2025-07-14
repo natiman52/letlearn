@@ -1,0 +1,64 @@
+{%load static%}
+<header class="site-header">
+    <div class="top-header">
+        <div class="cont">
+            <div class="top-header-left ">
+                <div class="top-header-block">
+                    <a href="tel:+251972692781" itemprop="telephone"><i class="fas fa-phone"></i> +251 972692781</a>
+                </div>
+            </div>
+            <div class="top-header-right">
+                <div class="social-block">
+                    <ul class="social-list">
+                        <button class="btn btn-primary"><a class="a-null" href="{%url 'tutorial:request'%}">Request a Course</a></button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top header Close -->
+    <div class="main-header position-relative border-bt">
+        <div class="container-md d-flex justify-content-between p-2 px-5 ">
+            <div class="logo-wrap " itemprop="logo">
+                <img class="logo-resize" src="{%static 'images/site-logo.png'%}" alt="Logo Image">
+                <!-- <h1>Education</h1> -->
+            </div>
+            <div class="nav-wrap">
+                <nav class="nav-desktop nav-postion">
+                    <ul class="menu-list">
+                        <li><a  href="{%url 'tutorial:home'%}" >Home</a></li>
+                        <li><a class="active">Tutorial</a></li>
+                        <li><a href='{%url "tutorial:collection"%}'>Collections</a></li>
+                    </ul>
+                </nav>
+                <div id="bar">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div id="close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+        .active{
+        color: rgb(125, 125, 125) !important;
+        text-decoration: none !important;
+    }
+    .active:hover{
+        cursor:default !important;
+    }
+    @media  screen and (max-width:1024px) {        
+        .nav-postion{
+            position: absolute;
+            left: 0;
+            top:90%;
+            background-color: whitesmoke;
+            width: 100%;
+            border-radius: 5px;
+            z-index: 10;
+            padding-top: 10px;
+        }
+    }
+</style>

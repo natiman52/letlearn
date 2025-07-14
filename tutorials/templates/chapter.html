@@ -1,0 +1,277 @@
+{%extends 'backend.html'%}
+{%load static%}
+
+{%block content%}
+{%include 'navbar3.html'%}
+{%block js%}
+<link rel="stylesheet" href="{%static 'chapter/chapter.css'%}">
+<meta name="keywords" content="Ethiopia Web development,web development,CSS,HTML,JavaScript,learn web development,{{ch.title}},{{tutorialname}}">
+{%endblock%}
+<div class="grid-container">
+        <aside id="sidebar">
+            <ul style="overflow-y: auto;" class="sidebar-nav gap-3 mt-4">
+                {%for unit in data%}
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#auth{{unit.id}}" aria-expanded="true" aria-controls="auth{{unit.id}}">
+                        <span>{{unit.title}} </span>
+                    </a>
+                    <ul id="auth{{unit.id}}" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar{{unit.id}}">
+                        {%for chapter in unit.chapters%}
+                        <li class="sidebar-item">
+                            {%if ch.title == chapter.title%}
+                            <a href="{%url 'tutorial:chapter' name=name slug=chapter.slug%}" class="sidebar-link active-side-link">{{chapter.title}}</a>
+                            {%else%}
+                            <a href="{%url 'tutorial:chapter' name=name slug=chapter.slug%}" class="sidebar-link ">{{chapter.title}}</a>
+                            {%endif%}
+                        </li>
+                        <p></p>
+                        {%endfor%}
+                    </ul>
+                </li>
+                {%endfor%}
+              
+            </ul>
+        </aside>
+    <div class="content">
+ <div class="container">
+    <div class="content-flex">
+<div class="content-flex-main" style="width: 100%;">
+
+    <div class="title">
+        <h1>{{ch.title}}</h1> 
+    </div>
+    <!-- ad Location-->
+    <!--
+        <div>
+        </div>
+    -->
+    {{ch.desc |safe}}
+    {%if ch.video%}
+    <div id="iframe" class="embed">
+        <iframe id="video-holder" class="iframe" src="{{ch.video}}" frameborder="0"></iframe>
+    </div>
+    {%endif%}
+    <div class="d-flex justify-content-end mb-4">
+        {%for v in ch.additional_video.all %}
+        <button passive onclick="changeVideo(event)" data-id="{{v.video}}" class="lists btn border fs-5 rounded">{{forloop.counter}}</button>
+        {%endfor%}
+    </div>
+    <div>
+        {{ch.conclusion |safe}}
+    </div>
+    <div class="navigation">
+        {%if previous%}
+        <button class="btn btn-success btn-lg button"> <a class="null-a" href="{%url 'tutorial:chapter' name=previous.id slug=previous.chapter.slug%}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></button>
+        {%else%}
+        <button class="btn btn-success disabled button btn-lg"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        {%endif%}
+        {%if next%}
+        <button class="btn btn-success btn-lg button"><a class="null-a" href="{%url 'tutorial:chapter' name=next.id slug=next.chapter.slug%}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></button>
+        {%else%}
+        <button class="btn btn-success disabled btn-lg button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+        {%endif%} 
+    </div>
+</div>
+<!-- Ad locatioin -->
+<!--  
+    <div class="content-flex-side">
+        
+    </div>
+-->
+    </div>
+ </div>
+ <section class="whyUs-section fixer">
+    <div id="codepen">
+    </div>
+    <div class="cont">
+        <div class="featured-points">
+            <ul>
+                <li><i class="fas fa-money-check-alt"></i> completely Free </li>
+                <li><i class="fas fa-book"></i>aceessible with easy</li>
+                <li><i class="fas fa-chalkboard-teacher"></i> orginized with chapters and units</li>
+                <li> <i class="fas fa-book"></i> amazing projects at the end of each unit</li>
+            </ul>
+        </div>
+        <div class="whyus-wrap">
+            <h1>About Me?</h1>
+            <p itemprop="description">I am a lone programmer that just wanted to organize the amazing different tutorial avaliable on youtube. When you go to the tutorial side you will see what I am talking about, try to enjoy it. It's is completely free and good luck</p>
+
+        </div>
+    </div>
+    <div class="d-flex bg-dark justify-content-center">
+        <div class="d-flex align-items-center mt-1 mb-2 gap-2">
+            <img src="{%static 'images/cbe.png'%}" class="cbe-icon mt-2" alt="">
+            <p style="color: white;font-size: 16px;" class="mb-0">1000538264184 </p>
+        </div>
+</div>
+</section>
+    </div>
+
+</div>
+<script>
+    function changeVideo(event){
+        var prev = document.getElementById('video-holder')
+        var holder = document.getElementById('iframe')
+        holder.removeChild(prev)
+        prev.src = event.target.dataset.id
+        holder.append(prev)
+        event.target.classList.remove('border')
+        event.target.classList.add('active-btn')
+        document.querySelectorAll('.lists').forEach(e => {
+        console.log(e)
+        if(e != event.target){
+            e.target.classList.remove('active-btn')
+            e.target.classList.add('border')
+        }
+       })
+    }
+const hamBurger = document.querySelector(".toggle-btn");
+if(window.innerWidth > 1024){
+    document.getElementById('codepen').height = "500px"
+}else{
+    document.getElementById('codepen').height = "300px"
+}
+hamBurger.addEventListener("click", function () {
+  document.querySelector("#sidebar").classList.toggle("expand");
+});
+
+</script>
+{%endblock%}
+{%block css%}
+<style>
+    .active-btn{
+        color: white;
+        background-color: #3674B5;
+    }
+    .active-btn:hover{
+        color: white;
+        background-color: #3674B5;   
+    }
+    .video-go{
+        right: 12%;
+        top: 6%;
+    }
+    .video-go button{
+        font-size: 28px;
+        border-radius: 50%;
+    }
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    pre{
+        font-size: 14px;
+        margin-top: 3rem !important;
+        margin-bottom: 3.4rem !important;
+    }
+    .button{
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .fixer{
+        margin: 0 -15px;
+        margin-top: 2.5rem;
+    }
+    .null-a{
+        all:unset;
+    }
+    .embed{
+        margin: auto;
+        margin-top: 3.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 650px;
+    }
+    .iframe{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .content-flex{
+        display: flex;
+    }
+    .content-flex h3{
+        margin-bottom: 2.2rem;
+    }
+    .content-flex p{
+        margin-bottom: 1.2rem !important;
+        margin-top: 1.2rem !important;
+        color: #494949;
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .content-flex ol {
+        margin-top: 3rem;
+    margin-bottom: 3rem;
+    }
+    .content-flex li{
+        font-size: 16px;
+    line-height: 24px;
+    }
+    .content-flex img{
+        object-fit: contain;
+    }
+    @media screen and (max-width:1024px) {
+        .content-flex{
+            flex-direction: column-reverse;
+        }
+        .content-flex-main{
+            width: 100%;
+            margin-right: 2rem;
+            position: relative;
+        }
+        .content-flex-side{
+            width: 100%;
+        }
+    }
+    @media screen and (min-width:1024px) {
+        .content-flex-main{
+            width: 85%;
+            margin-right: 2rem;
+            position: relative;
+
+        }
+        .content-flex-side{
+            width: 15%;
+            padding-top: 4rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    @media screen and (max-width:990px) {
+        .embed {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; 
+  height: auto !important;/* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+@media screen and (max-width:376px) {
+    #sidebar{
+        margin-top: 11rem !important;
+    }
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+} 
+    }
+
+</style>
+{%endblock%}

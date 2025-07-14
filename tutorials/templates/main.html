@@ -1,0 +1,42 @@
+{%extends 'backend.html'%}
+{%load static%}
+
+{%block content%}
+{%include 'navbar3.html'%}
+<div class="grid-container">
+        <aside id="sidebar" class="expand">
+            <ul class="sidebar-nav">
+                {%for unit in data%}
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <span>{{unit.title}}</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        {%for chapter in unit.chapters%}
+                        <li class="sidebar-item">
+                            <a href="{%url 'tutorial:chapter' name=name slug=chapter.slug%}" class="sidebar-link">{{chapter.title}}</a>
+                        </li>
+                        <p></p>
+                        {%endfor%}
+                    </ul>
+                </li>
+                {%endfor%}
+              
+            </ul>
+        </aside>
+</div>
+<script>
+    if(window.innerWidth < 820){
+    document.querySelector("#sidebar").classList.remove("expand");
+}
+const hamBurger = document.querySelector(".toggle-btn");
+hamBurger.addEventListener("click", function () {
+  document.querySelector("#sidebar").classList.toggle("expand");
+});
+
+</script>
+{%endblock%}
+{%block js%}
+<link rel="stylesheet" href="{%static 'chapter/chapter.css'%}">
+{%endblock%}

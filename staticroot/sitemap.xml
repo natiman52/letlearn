@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://letlearncoding.com/</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/request</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorials</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/collection</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/1/Forntend&amp;Backend-JS-PureJS-introduction</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/2/Frontend-CSS-CSS&amp;syntax-introduction</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/3/Frontend-HTML-UTB-structure-of-html</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/1/Forntend&amp;Backend-JS-PureJS2-javascript-variables</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/3/Frontend-HTML-UTB2-first-html-page</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/3/Frontend-HTML-UTB3-installing-vs-code</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/3/Frontend-HTML-UTB4-html-element-tag-and-attribute</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://letlearncoding.com/tutorial/3/Frontend-HTML-UTB5-html-understanding-head</loc>
+  <lastmod>2024-08-24T10:16:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

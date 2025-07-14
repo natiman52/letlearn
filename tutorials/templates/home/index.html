@@ -1,0 +1,206 @@
+{%extends 'backend.html'%}
+{%load static%}
+
+{%block styleimport %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/flexslider.css" integrity="sha512-hQ8ok8HII8QoPhb/Gy/nGPYHmtCCqnjvCMxPOzCWST/usW3JmKUx8jFDov795xpeCsA36E1OkF2NC1DT9h/uPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{%endblock styleimport %}
+
+{%block content%}
+<div id="page" class="site" style="display: none;">
+
+    {%include 'navbar.html'%}
+    <!-- Header Close -->
+    <div class="banner">
+        <div class="owl-four owl-carousel top" itemprop="image">
+            <img src="{% static 'images/five.webp'%}" style="height: 1000px;" alt="Image of Bannner">
+            <img src="{% static 'images/three.jpg'%}" style="height: 1000px;" alt="Image of Bannner">
+            <img src="{% static 'images/six.jfif'%}" style="height: 1000px;" alt="Image of Bannner">
+        </div>
+        <div class="cont promo" itemprop="description">
+            <h1>Let's Learn Coding</h1>
+            <h3>Scroll down and see what you want to learn and if you can't find it request the course</h3>
+        </div>
+         <div id="owl-four-nav" class="owl-nav"></div>
+    </div>
+    <div class="container">
+        <div class="d-flex align-items-center mt-5 pt-5 mb-5 flex-column flex-md-row flex-lg-row flex-xl-row">
+            <img class="light-img" src="{%static 'images/what-you-will-learn.jpg'%}" alt="">
+            <div>
+                <h2 class="light-h2">What is this website?</h2>
+                <p class="light-p">It is a free website that contains different tutorials from different sources in an organized manner so you can learn coding easily and effectively and one last thing if you truly enjoy and appreciate the work done here try to help me by motivating me with a drink. Account is at the bottom Thanks &#128514;</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-heading">
+        <div class="cont">
+            <h2>popular courses</h2>
+        </div>
+    </div>
+    <!-- Popular courses End -->
+    <div class="learn-courses">
+        <div class="cont ">
+            <div class="courses">
+                <div class="owl-one owl-carousel">
+                    {%for o in obj%}
+                    <div class="box-wrap" itemscope itemtype='https://schema.org/Event'>
+                        <div class="img-wrap"  ><img  itemprop="image" class="img-self" src="{%get_media_prefix%}{{o.image}}" alt="courses picture"></div>
+                        <a href="{%url 'tutorial:course' name=o.id %}" class="learn-desining-banner" itemprop="location">Go To <span itemprop="name">{{o.name}}</span> ></a>
+                        <div class="box-body" >
+                            <p itemprop="description">{{o.desc}}</p>
+                            <section itemprop="startDate">
+                                <p><span>Date:</span> {{o.date}}</p>
+                            </section>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="request-main mb-5">
+    <h2 class="text-center mb-5 mt-5">Requested Course</h2>
+    <div class="container d-flex justify-content-center pb-5 pt-2">
+        <div class="owl-carousel owl-theme">
+            {%for i in req%}
+            <div class="item item-container">
+                <p class="req-name">{{i.name}}</p>
+                <p class="req-coursename">{{i.courseName}}</p>
+                <p class="req-desc">"{{i.desc}}"</p>
+                <p class="req-date">{{i.date}}</p>
+            </div>
+            {%endfor%}
+
+        </div>
+    </div>
+</div>
+    <!-- Learn courses End -->
+    <section class="whyUs-section">
+        <div class="cont">
+            <div class="featured-points">
+                <ul>
+                    <li><i class="fas fa-money-check-alt"></i> completely Free </li>
+                    <li><i class="fas fa-book"></i>aceessible with easy</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> orginized with chapters and units</li>
+                    <li> <i class="fas fa-book"></i> amazing projects at the end of each unit</li>
+                </ul>
+            </div>
+            <div class="whyus-wrap">
+                <h2>About Me?</h2>
+                <p itemprop="description" style="margin-bottom: 2rem;">I am a lone programmer that just wanted to organize the amazing different tutorial avaliable on youtube. When you go to the tutorial side you will see what I am talking about, try to enjoy it. It's is completely free and good luck</p>
+            </div>
+        </div>
+    </section>
+    <div class="d-flex bg-dark justify-content-center">
+        <div class="d-flex align-items-center mt-1 mb-2 gap-2">
+            <img src="{%static 'images/cbe.png'%}" class="cbe-icon mt-2" alt="">
+            <p style="color: white;font-size: 16px;" class="mb-0">1000538264184 </p>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
+<meta name="google-site-verification" content="iFuRhHQc20e4wJORXcikMoNsY8uuh1Nb5ViniroGxZc" />
+{%block css%}
+<script>
+    window.onload = function(){
+        setTimeout(function(){
+            document.getElementById('page').style.display ='block'
+        },100)
+    }
+    $('.owl-carousel').owlCarousel({
+loop:true,
+margin:25,
+nav:true,
+responsive:{
+    300:{
+        items:1
+    },
+    600:{
+        items:2
+    },
+    900:{
+        items:3
+    }
+}
+})
+</script>
+{%endblock%}
+{%block js%}
+    <style>
+        .light-img{
+            width: 350px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        	.img-self{
+		height: 350px;
+        object-fit:cover;
+	}
+    @media screen and (max-width:765px) {
+        .img-self {
+    height: 300px;
+    object-fit: cover;
+}
+
+
+    }
+    .item-container{
+        border: 1px solid #eeeeee;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    .request-main h2{
+        font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    }
+    .req-name{
+        font-size: 2.5rem;
+    font-family: "Raleway", sans-serif;
+    color: #000000;  
+    text-align: center;
+    }
+    .light-p{
+        font-size: 1.8rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #000000;  
+    }
+    .light-h2{
+        font-size: 3.5rem;
+    font-family: helvetica, sans-serif;
+    color: #000000;  
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    }
+    .req-coursename{
+        font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #000;  
+    }
+    .req-desc{
+        font-size: 1.3rem;
+    font-family: "Raleway", sans-serif;
+    color: #000;  
+    }
+    .req-date{
+        font-size: 1.4rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #000;   
+    text-align: end;
+    }
+
+    </style>
+
+{%endblock%}
+{%block scriptimport%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.js" integrity="sha512-bmniUxky3GwwCQUvbBEQtzGj0MvcuScaQhkX6F+Z3QRKMDRHfeyk+FD+Z9VHrVDwxKhY5H30hFIe3C+MyEsvdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{%endblock scriptimport%}
