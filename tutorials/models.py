@@ -49,7 +49,8 @@ class UnitAndTutorial(models.Model):
     Tutorial = models.ForeignKey(to=tutorial,on_delete=models.CASCADE)
     unit = models.ForeignKey(to=Unit,on_delete=models.CASCADE)
     index = models.IntegerField()
-
+    class Meta:
+        ordering = ['index']
 class UnitAndChapter(models.Model):
     Chapter = models.ForeignKey(to=Chapter,on_delete=models.CASCADE)
     unit = models.ForeignKey(to=Unit,on_delete=models.CASCADE)

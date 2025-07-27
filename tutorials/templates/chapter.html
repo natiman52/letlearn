@@ -1,6 +1,16 @@
 {%extends 'backend.html'%}
 {%load static%}
+{%block styleimport%}
+<meta name="twitter:title" content="{{ch.title}}">
+<meta name="twitter:description" content="{{ch.desc}}">
+<meta property="og:image" content="{%static 'images/js.png'%}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:description" content="{{ch.desc}}">
+<meta name="title" property="og:title" content="Let's Learn Coding">
 
+{%endblock styleimport%}
 {%block content%}
 {%include 'navbar3.html'%}
 {%block js%}
