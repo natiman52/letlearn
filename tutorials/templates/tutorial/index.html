@@ -11,7 +11,7 @@
             <div class="card-body">
               <h2 class="card-title">{{o.name}}</h2>
               <p class="my-card-text">{{o.desc}}</p>
-              <button  class="btn btn-primary"><a href="{%url 'tutorial:course' name=o.id %}" class="null">Go to tutorial</a></button>
+              <button id="{{o.name}}" class="btn btn-primary"><a href="{%url 'tutorial:course' name=o.id %}" class="null">Go to tutorial</a></button>
             </div>
           </div>
         {%endfor%}
