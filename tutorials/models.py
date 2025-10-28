@@ -35,14 +35,23 @@ class tutorial(models.Model):
     image=models.ImageField(upload_to='images')
     date =models.DateField(default=datetime.date.today)
     units = models.ManyToManyField(to=Unit,blank=True,through="UnitAndTutorial")
+    slug =models.CharField(unique=True,null=True,blank=True,max_length=250)
+
     def __str__(self) -> str:
         return self.name
+    def save(self,*args,**kwargs):
+        slug = slugify(self.name)
+        super(Chapter, self).save(*args, **kwargs)
 class collection(models.Model):
     name =models.CharField(max_length=45)
     image=models.ImageField(upload_to='images')
     desc = models.TextField()
     date =models.DateField(default=datetime.date.today)
     courses = models.ManyToManyField(to=tutorial)    
+    slug =models.CharField(unique=True,null=True,blank=True,max_length=250)
+    def save(self,*args,**kwargs):
+        slug = slugify(self.name)
+        super(Chapter, self).save(*args, **kwargs)
     def __str__(self):
         return self.name
 class UnitAndTutorial(models.Model):
