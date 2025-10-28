@@ -18448,3 +18448,193 @@ Not Found: /robots.txt
 Not Found: /robots.txt
 Not Found: /.well-known/traffic-advice
 Not Found: /.well-known/traffic-advice
+Internal Server Error: /tutorial/1/Forntend&Backend-JS-PureJS-introduction/tutorial/1/Forntend%26Backend-JS-PureJS-introduction
+Traceback (most recent call last):
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/letlearn/letslearn/tutorials/views.py", line 31, in showchap
+    chapter = Chapter.objects.get(slug=slug)
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 633, in get
+    raise self.model.DoesNotExist(
+tutorials.models.Chapter.DoesNotExist: Chapter matching query does not exist.
+Not Found: /favicon.ico
+Internal Server Error: /tutorial/1/Forntend&Backend-JS-PureJS-introduction/tutorial/1/Forntend%26Backend-JS-PureJS-introduction
+Traceback (most recent call last):
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/letlearn/letslearn/tutorials/views.py", line 31, in showchap
+    chapter = Chapter.objects.get(slug=slug)
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/letlearn/virtualenv/letslearn/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 633, in get
+    raise self.model.DoesNotExist(
+tutorials.models.Chapter.DoesNotExist: Chapter matching query does not exist.
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /.env.local
+Not Found: /.env.dev
+Not Found: /.env.prod
+Not Found: /.env.staging
+Not Found: /.env.development
+Not Found: /.env.production
+Not Found: /.env.test
+Not Found: /.env.backup
+Not Found: /.env.example
+Not Found: /.env.sample
+Not Found: /.env.old
+Not Found: /.env.bak
+Not Found: /.env.save
+Not Found: /.env.orig
+Not Found: /.env.swp
+Not Found: /.env~
+Not Found: /.env.tmp
+Not Found: /.env.dist
+Not Found: /api/.env.save
+Not Found: /api/.env.bak
+Not Found: /api/.env.old
+Not Found: /app/.env.save
+Not Found: /app/.env.bak
+Not Found: /app/.env.old
+Not Found: /config/.env.save
+Not Found: /config/.env.bak
+Not Found: /config/.env.old
+Not Found: /src/.env.save
+Not Found: /src/.env.bak
+Not Found: /src/.env.old
+Not Found: /public/.env.save
+Not Found: /public/.env.bak
+Not Found: /public/.env.old
+Not Found: /assets/.env.save
+Not Found: /assets/.env.bak
+Not Found: /assets/.env.old
+Not Found: /includes/.env.save
+Not Found: /includes/.env.bak
+Not Found: /includes/.env.old
+Not Found: /lib/.env.save
+Not Found: /lib/.env.bak
+Not Found: /lib/.env.old
+Not Found: /application/.env.save
+Not Found: /application/.env.bak
+Not Found: /application/.env.old
+Not Found: /system/.env.save
+Not Found: /system/.env.bak
+Not Found: /system/.env.old
+Not Found: /core/.env.save
+Not Found: /core/.env.bak
+Not Found: /core/.env.old
+Not Found: /modules/.env.save
+Not Found: /modules/.env.bak
+Not Found: /modules/.env.old
+Not Found: /plugins/.env.save
+Not Found: /plugins/.env.bak
+Not Found: /plugins/.env.old
+Not Found: /themes/.env.save
+Not Found: /themes/.env.bak
+Not Found: /themes/.env.old
+Not Found: /vendor/.env.save
+Not Found: /vendor/.env.bak
+Not Found: /vendor/.env.old
+Not Found: /storage/.env.save
+Not Found: /storage/.env.bak
+Not Found: /storage/.env.old
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /js
+Not Found: /robots.txt
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 7, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 7, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Reached max children process limit: 6, extra: 2, current: 8, busy: 7, please increase LSAPI_CHILDREN.
+[UID:1911][983808] Child process with pid: 1017153 was killed by signal: 15, core dumped: no
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /xmlrpc.php
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /assets/index-C5f4NnZ3.css
+Not Found: /assets/index-11mCDRkx.js
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /wp-admin/setup-config.php
+Not Found: /wp-admin/install.php
+Not Found: /wordpress/wp-admin/setup-config.php
+Not Found: /wordpress/wp-admin/install.php
+Not Found: /wp/wp-admin/setup-config.php
+Not Found: /wp/wp-admin/install.php
+Not Found: /new/wp-admin/setup-config.php
+Not Found: /new/wp-admin/install.php
+Not Found: /old/wp-admin/setup-config.php
+Not Found: /old/wp-admin/install.php
+Not Found: /blog/wp-admin/setup-config.php
+Not Found: /blog/wp-admin/install.php
+Not Found: /test/wp-admin/setup-config.php
+Not Found: /test/wp-admin/install.php
+Not Found: /shop/wp-admin/setup-config.php
+Not Found: /shop/wp-admin/install.php
+Not Found: /robots.txt
+Not Found: /.well-known/traffic-advice
+Not Found: /.well-known/traffic-advice
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /assets/index-11mCDRkx.js
+Not Found: /assets/index-C5f4NnZ3.css
+Not Found: /xmlrpc.php
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Not Found: /media/system/js/core.js
+Not Found: /wp-includes/js/jquery/jquery.js
+Not Found: /robots.txt
