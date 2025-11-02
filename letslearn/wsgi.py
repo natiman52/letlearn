@@ -10,4 +10,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'letslearn.settings')
 
 application = get_wsgi_application()
 application = WhiteNoise(application, root=(settings.BASE_DIR / "staticroot") )
-application.add_files(settings.BASE_DIR / "mediafiles", prefix="mediafiles/")
+application.add_files(settings.BASE_DIR / "mediafiles", prefix="media/")
